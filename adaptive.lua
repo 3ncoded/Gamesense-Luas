@@ -23,8 +23,9 @@ local labels = {
     hitChance = {[0] = "Off", [100] = "Ur retarded"},
     multipoint = {[24] = "Auto"}
 }
-local function generateLabels() for I = 1, 26 do labels.minDamage[100 + I] = string.format("HP + %s", I) end end
-generateLabels()
+for i=1, 26 do
+    labels.minDamage[100 + i] = 'HP + ' .. i
+end
 
 local weaponIndexes = {
     Global      = {},
